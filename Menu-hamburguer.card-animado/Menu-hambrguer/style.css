@@ -1,0 +1,157 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   overflow: hidden; /*tira o espaçamento da altura eliminando o scroll*/  
+}
+
+header{
+   background-color: rgb(150, 93, 133);
+   font-family: Arial, Helvetica, sans-serif;
+   position: relative;
+ margin-bottom: 20px;
+   height: 100vh;
+}
+
+/*Alinhamento vertical e horizontal*/
+header h1{
+   text-align: center;
+   color: white;
+   line-height: 2;
+   font-size: 3vw;
+   text-transform: uppercase;
+ 
+}
+
+.checkbox, .wrapper {
+   background-color: pink;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content:right; 
+   position: relative;
+}
+
+.checkbox {
+   width: 39px;
+   height: 39px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;/* aparece a mãozinha*/
+   position: absolute;
+   top: -4vw;
+   right: 4vw;
+   
+}
+
+.checkbox .trace {
+   width: 2.5vw;
+   height: 7%;
+   background-color: rgb(248, 246, 246);
+   position: absolute;
+   display: flex;
+   cursor: pointer;
+   right: 20px;
+  
+   border-radius: 4px;
+   transition: 0.5s ease-in-out; /*começa e acaba lento*/
+}
+
+.checkbox .trace:nth-child(1){
+   top: 0.7px;
+   right: 1px;
+   transform: rotate(0);
+   
+}
+
+.checkbox .trace:nth-child(2){
+   top: 7px;
+   right: 1px;
+   transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+   top: 13px;
+   right: 1px;
+   transform: rotate(0);
+}
+
+#toggle{
+   display: none;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+   transform: rotate(45deg);
+   top: 7px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+   transform: translateX(100px);
+   width: 20px;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.3s ease-in-out;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+   transform: rotate(-45deg);
+   top: 7px;
+}
+
+.menu{
+   opacity: 0;
+   visibility: hidden;
+   transform: translateX(250px);
+   width: 200px;
+   position: absolute;
+   border-radius: 4px;
+   transition: 0.5s ease-in-out; 
+}
+
+body.expanded .menu{
+   opacity: 1;
+   visibility: visible;
+   transform: translateX(6px);
+   transition: 0.5s ease-in-out;
+}
+
+body.expanded .menu{
+   background-color: rgba(209, 142, 152, 0.192);
+   width: 150px;
+   height: 170px;
+   position: absolute;
+   border-radius: 5px;
+   transition: 0.9s ease-in-out;     
+}
+
+.menu ul{
+   font-family: Arial, Helvetica, sans-serif;
+   color: rgb(112, 45, 45);
+   line-height: 2.3em;
+   padding-left: 10px;
+   list-style: none;
+   font-size: 12px;
+}
+
+a{
+   text-decoration: none;
+}
+
+a:hover{
+   text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+/* *{
+   margin: 0;
+   padding: 0;
+} */
+
+body{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*configura a div.card no centro da página*/
+.contain{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card{
+   width: 500px;
+   height: 400px;
+   background-image: url(imagem.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   filter:grayscale(0.9);
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.card-wrapper{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;/* para poder trabalhar com as posições do pseudo elemento criado abaixo*/
+}
+
+.card-wrapper::before{
+   content: "";
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   display: block;
+   border: 1px solid white;
+   opacity: 0;
+   transition: 0.3s;
+}
+.card-wrapper h2{
+   font-size: 2em;
+   text-transform: uppercase;
+   letter-spacing: 4px;/* cria um espaçamento entre as letras*/
+   margin: 0;
+   transition: 0.3s; 
+}
+
+.card-wrapper p{
+   font-size: 0;
+   visibility: hidden;
+   opacity: 0;
+   font-weight: bold;
+   text-transform: uppercase;
+   transition: 0.3s;
+}
+.card:hover{
+   filter: unset;/* desmarca a opção definida anteriormente*/
+}
+
+.card:hover > .card-wrapper::before{
+   width: 400px;
+   height: 300px;
+   opacity: 1;
+}
+
+.card:hover > .card-wrapper p{
+   font-size: 16px;
+   visibility: visible;
+   opacity: 1;
+}
+
+
+
+

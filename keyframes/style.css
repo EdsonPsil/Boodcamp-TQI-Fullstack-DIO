@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+:root{
+   --marinho:#010326;
+   --caneta: #010B40;
+   --celeste: #94C6F2;
+   --amarelo: #F2EEAC;
+}
+
+
+
+   body{
+      margin: 0;
+      padding: 0;
+      color: var(--amarelo);
+      font-family: 'Pattaya', sans-serif;
+      font-weight: bold;
+      overflow: hidden; /*tira a rolagem da página*/
+   }
+
+   .wrapper{
+      
+      height: 100vh;
+      width: 100vw;
+      background:linear-gradient(to top right,var(--caneta),var(--celeste), var(--amarelo) );
+      background-size: 400% 400%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: background 10s ease-in-out both infinite alternate-reverse ;
+       /* 
+       name - nome da função
+       duration - tempo de duração
+       timing-function - tempo da curva de animação
+       delay - tempo antes de começãr
+       iteration-count - quantas vezes será repitida
+       direction - onde vai ocorrer
+       fill-mode - como começa e como termina
+       */
+      
+   }
+
+   h1, h2{
+      letter-spacing: 4px;
+      animation: grow 3s forwards  ;
+   }
+
+   .social-media{
+      margin-top: 1rem;
+      display: flex;
+   }
+   a{
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: var(--amarelo);
+      font-size: 24px;
+      padding: .3rem 2rem;
+      border: 1px solid var(--amarelo);
+      min-width: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: background 10s ease-in-out both infinite alternate-reverse ;
+    
+    
+   }
+
+   a:hover{
+      color: var(--marinho);
+      background-color:var(--amarelo);
+      
+   }
+
+   @keyframes background {
+      0% {
+         background-position: 0% 80%;
+         
+      }
+      50% {
+         background-position: 80% 100%;
+         color: var(--caneta);
+         border-color: var(--caneta);
+      }
+      100%{
+         background-position: 0% 90%;
+      }
+      }
+      @keyframes grow {
+         0%{font-size:0;}
+         100%{font-size:40px;}
+         
+      }
+   
+
+
+
