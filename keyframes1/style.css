@@ -44,8 +44,10 @@
 
    h1, h2{
       letter-spacing: 4px;
-      animation: grow 3s forwards  ;
+      animation: grow 3s forwards;
+      margin: 10px;
    }
+ 
 
    .social-media{
       margin-top: 1rem;
